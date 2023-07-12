@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" 
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" 
+          crossorigin="anonymous">
+    <style>
+        .form-group {
+            margin-bottom: 20px;
+            display: flex;
+        }
+        .form-group label {
+            width: 100px;
+            margin-right: 10px;
+        }
+        .form-group .form-control {
+            flex-grow: 1;
+        }
+        #items {
+            text-align: center;
+        }
+        .item-row {
+            margin-bottom: 10px;
+        }
+        .item-row::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .item-row .col-4 {
+            float: left;
+            width: 33.33%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="text-center"> 
+        AGREGAR LISTA DE PEDIDO 
+    </h1>
+    <hr>
+    <br>
+    <div class="container text-center">
+        <div class="row">
+            
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="pedido">Pedido:</label>
+                    <input type="text" class="form-control" name="pedido" id="pedido" 
+                        placeholder="Escribe el número de pedido">
+                </div>
+                <div class="form-group">
+                    <label for="producto">Producto:</label>
+                    <input type="text" class="form-control" name="producto" id="producto" 
+                        placeholder="Escribe el nombre del producto">
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="cantidad">Cantidad:</label>
+                    <input type="text" class="form-control" name="cantidad" id="cantidad" 
+                        placeholder="Escribe la cantidad">
+                </div>
+                <div class="form-group">
+                    <label for="valor">Valor:</label>
+                    <input type="text" class="form-control" name="valor" id="valor" 
+                        placeholder="Escribe el valor">
+                </div>
+            </div>
+            <br><br><br><br><br><br>
+
+            <div class="col-12 text-center mb-2">
+                <button type="button" class="btn btn-info" onclick="addItem()"> Agregar </button>
+            </div>
+        </div>
+        <br>
+        <div>
+            <h2 class="text-center mb-3"> 
+                Listado de Pedidos 
+            </h2>
+            <hr>
+            <br>
+            <div id="items"></div>
+        </div>
+    </div>
+
+
+    <script src="./js/objetoScript.js">  </script>
+    
+</body>
+</html>
